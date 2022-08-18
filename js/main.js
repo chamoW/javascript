@@ -7,6 +7,9 @@ import {
   subString,
 } from "./exercises.js";
 import { countRepeteadWord, deletePattern, invertString, validatePalindrom } from "./exercises2.js";
+import { getAleatorio, getFactorial } from "./exercises3.js";
+import { getYears } from "./exercises4.js";
+import {  getMaxAndMin, getParImpar, getSquares } from "./exercises5.js";
 
 console.group("OPERACTIONS");
 welcome();
@@ -110,5 +113,69 @@ deletePattern("veamos ", "veamos");
 deletePattern("veamos que sucede en veamos ", "veamos ");
 deletePattern("veamos que sucede en veamos que", "que");
 deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
-
 console.groupEnd("REPLACED WORD");
+
+
+console.group("ALEATORE NUMBER");
+getAleatorio();
+getAleatorio();
+getAleatorio();
+getAleatorio();
+getAleatorio();
+getAleatorio();
+console.groupEnd("ALEATORE NUMBER");
+
+
+console.group("FACTORIAL");
+getFactorial()
+getFactorial("")
+getFactorial(-1)
+getFactorial(0)
+getFactorial(1)
+getFactorial(2)
+getFactorial(3)
+getFactorial(4)
+getFactorial(5)
+console.groupEnd("FACTORIAL");
+
+
+console.group("GET YEARS");
+getYears()
+getYears("")
+getYears(1)
+getYears(new Date(1986, 11,30 ))
+getYears(new Date(1990, 6,15 ))
+getYears(new Date(2021, 3,30 ))
+console.groupEnd("GET YEARS");
+
+
+console.group("array squares");
+getSquares()
+getSquares(1)
+getSquares({number:1})
+getSquares("1")
+getSquares([1,2,3,4])
+console.groupEnd("array squares");
+
+
+console.group("array max and min");
+getMaxAndMin()
+getMaxAndMin(1)
+getMaxAndMin({number:1})
+getMaxAndMin("1")
+getMaxAndMin([1,2,3,4])
+getMaxAndMin([1, 4, 5, 99, -60])
+getMaxAndMin([1,2,3,"SS"])
+console.groupEnd("array max and min");
+
+
+
+console.group("pairs and imparis");
+getParImpar()
+getParImpar(1)
+getParImpar({number:1})
+getParImpar("1")
+getParImpar([2,2,4,4])
+getParImpar([1, 4, 5, 99, -60])
+getParImpar([1,2,3,"SS"])
+console.groupEnd("pairs and imparis");

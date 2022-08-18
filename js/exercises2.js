@@ -6,7 +6,7 @@
 
 import { validateString } from "./utils.js";
 
-export const invertString = (text) => {
+export const invertString = (text="") => {
   if (validateString(text)) {
     let inverted = text.split("").reverse().join("");
     return inverted;
@@ -15,7 +15,7 @@ export const invertString = (text) => {
   return false;
 };
 
-export const countRepeteadWord = (text, word) => {
+export const countRepeteadWord = (text="", word="") => {
   if (validateString(text) && validateString(word)) {
     let counter = 0;
 
@@ -31,7 +31,7 @@ export const countRepeteadWord = (text, word) => {
   }
 };
 
-export const validatePalindrom = (text) => {
+export const validatePalindrom = (text="") => {
   if (validateString(text)) {
     let newText = text.split(" ").join("");
 
@@ -48,7 +48,7 @@ export const validatePalindrom = (text) => {
 };
 
 
-export const deletePattern = (text, pattern) => {
+export const deletePattern = (text="", pattern="") => {
 
     if (validateString(text) && validateString(pattern)) {
         let finder = new RegExp(pattern,"gi")
