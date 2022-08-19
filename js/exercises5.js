@@ -6,10 +6,12 @@ export const getSquares = (data = undefined) => {
   if (validateArray(data)) {
     let array = [];
 
+    /*
     for (let index = 0; index < data.length; index++) {
       array[index] = Math.pow(data[index], 2);
     }
-
+    */
+    array = data.map((item) => item * item);
     return console.info(`${data} squares is ${array}`);
   }
 };
@@ -63,5 +65,58 @@ export const getParImpar = (data = undefined) => {
     return console.info(
       `From ${data} pairs are: ${arrayPar} and impars are: ${arrayImpar}`
     );
+  }
+};
+
+/*
+24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+*/
+export const orderData = (data = undefined) => {
+  if (validateNumericArray(data)) {
+    let asc = data.map((el) => el).sort();
+    let desc = data
+      .map((el) => el)
+      .sort()
+      .reverse();
+
+    let object = {
+      data,
+      asc,
+      desc,
+    };
+    return console.info(object);
+  }
+};
+
+/*
+25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+*/
+export const deleteDuplicated = (data = undefined) => {
+  if (validateArray(data)) {
+    let cleanedArray = data.filter(
+      (value, index, self) => self.indexOf(value) === index
+    );
+    let object = {
+      data,
+      cleanedArray,
+    };
+    return console.info(object);
+  }
+};
+/*
+26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+*/
+export const obtenerPromedio = (data = undefined) => {
+  if (validateNumericArray(data)) {
+    let promedio = data.reduce((accumulator, item, index, self) => {
+      accumulator += item;
+      if (index === self.length - 1) {
+        return (accumulator / self.length).toFixed(2);
+      } else {
+        return accumulator;
+      }
+    });
+
+    return console.info(`El promedio de ${data.join("+ ")} es ${promedio}`);
   }
 };

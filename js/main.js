@@ -9,7 +9,7 @@ import {
 import { countRepeteadWord, deletePattern, invertString, validatePalindrom } from "./exercises2.js";
 import { getAleatorio, getFactorial } from "./exercises3.js";
 import { getYears } from "./exercises4.js";
-import {  getMaxAndMin, getParImpar, getSquares } from "./exercises5.js";
+import {  deleteDuplicated, getMaxAndMin, getParImpar, getSquares, obtenerPromedio, orderData } from "./exercises5.js";
 
 console.group("OPERACTIONS");
 welcome();
@@ -179,3 +179,36 @@ getParImpar([2,2,4,4])
 getParImpar([1, 4, 5, 99, -60])
 getParImpar([1,2,3,"SS"])
 console.groupEnd("pairs and imparis");
+
+
+console.group("ORDER DATA");
+orderData()
+orderData({})
+orderData(1)
+orderData([])
+orderData([2,3,"s"])
+orderData([2,3, 54, 90, 0])
+console.groupEnd("ORDER DATA");
+
+
+
+console.group("DELETE DUPLICATED");
+deleteDuplicated()
+deleteDuplicated({})
+deleteDuplicated(1)
+deleteDuplicated([])
+deleteDuplicated([2,3,"s", 2, 2])
+deleteDuplicated([2,3, 54, 90, 0, 3, 0])
+console.groupEnd("DELETE DUPLICATED");
+
+
+
+console.group("OBTENER PROMEDIO");
+obtenerPromedio()
+obtenerPromedio({})
+obtenerPromedio(1)
+obtenerPromedio([])
+obtenerPromedio([2,3,"s", 2, 2])
+obtenerPromedio([2,3, 54, 90, 0, 3, 0])
+obtenerPromedio([20,18,17, 20, 19])
+console.groupEnd("OBTENER PROMEDIO");

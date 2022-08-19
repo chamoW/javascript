@@ -35,41 +35,34 @@ export const validateDate = (text) => {
   }
 };
 
-export const validateArray = (text) => {
-  if (!text) {
-    console.warn("Debe ingresar un valor");
-
-    return false;
+export const validateArray = (arreglo) => {
+  if (arreglo === undefined) {
+    return console.warn("Debe ingresar un arreglo de numeros");
   }
 
-  if (text instanceof Array) {
-    return true;
-  } else {
-    console.error(`${text} "IT IS NOT AN ARRAY!!!. It is a ${typeof text}`);
-    return false;
+  if (!(arreglo instanceof Array)) {
+    return console.error(
+      `${arreglo} "IT IS NOT AN ARRAY!!!. It is a ${typeof arreglo}`
+    );
   }
+
+  if (arreglo.length === 0) {
+    return console.warn(`El array esta vacio`);
+  }
+
+  return true;
 };
 
-export const validateNumericArray = (text) => {
-  if (!text) {
-    console.warn("Debe ingresar un valor");
-
-    return false;
-  }
-
-  if (text instanceof Array) {
-    for (const element of text) {
-
-        //console.log(`${typeof element}`);
+export const validateNumericArray = (arreglo) => {
+  if (validateArray(arreglo)) {
+    for (const element of arreglo) {
+      //console.log(`${typeof element}`);
       if (typeof element !== "number") {
-        console.error(`${element} is not number`);
-        return false;
+        return console.error(`${element} is not number`);
       }
     }
-
     return true;
-  } else {
-    console.error(`${text} "IT IS NOT AN ARRAY!!!. It is a ${typeof text}`);
-    return false;
   }
+
+  
 };
