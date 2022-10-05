@@ -1,0 +1,172 @@
+/********************* RESET CSS ************************************/
+
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  --main-color: rgb(241, 174, 50);
+  --second-color: #222;
+  --main-modal-color: rgba(247, 222, 30, 0.85);
+  --second-modal-color: rgba(34, 34, 34, 0.85);
+  --container-width: 1200px;
+  --header-height:85px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(219, 216, 216);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #eee;
+}
+
+/********************* CUSTOM CSS ************************************/
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  height: var(--header-height);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.header-text {
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section {
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: justify;
+  padding-top: calc(var(--header-height) + 10px);
+  background-color: #eee;
+  
+}
+section:nth-child(1){
+  padding-top: 0;
+}
+
+section > h4 {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #000;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+}
+
+/*********************  ASIDE **********************************/
+.aside-panel {
+  display: flex;
+  background-color: var(--second-modal-color);
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  transition: transform .3s ease;
+  /**De arriba*/
+  transform: translate(0, -100%);
+  /**De abajo*/
+  transform: translate(0, +100%);
+  /**De izquierda*/
+  transform: translate(-100%, 0);
+  /**De derecha*/
+  transform: translate(+100%, 0);
+}
+
+.aside-panel.is-active {
+  transform: translate(0,0);
+}
+
+.menu-nav {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-nav a {
+  padding: 1rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.menu-nav a:hover {
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
+
+/*********************  HAMBURGER **********************************/
+.btn-hamburger {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vh;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid #000 !important;
+  padding: 0 !important;
+  background-color: var(--main-color) !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
