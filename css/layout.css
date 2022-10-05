@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #eee;
+}
+
+header {
+  padding: 1rem;
+  background-color: rgb(59, 150, 235);
+  color: #eee;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(219, 216, 216);
+}
+
+main {
+    padding: 1rem;
+  flex-grow: 1;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+}
+
+.menu > ul {
+  list-style-type: none;
+}
+
+.hero-image-container {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image {
+  min-height: inherit;
+  background-image: url("https://placeimg.com/1200/320/tech");
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image div {
+  min-height: inherit;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: red;
+}
+
+.hero-image h2 {
+  font-size: 5vw;
+}
+
+@media screen and (min-width: 450px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    display: flex;
+  }
+
+  .menu li {
+    padding: 0.5rem;
+  }
+}

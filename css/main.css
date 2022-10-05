@@ -1,0 +1,168 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container-flex,
+.container-inline,
+.container-flex-row,
+.container-flex-row-reverse,
+.container-flex-column,
+.container-flex-column-reverse,
+.container-flex-wrap-row,
+.container-flex-wrap-column {
+    height: 15vh;
+    /*width: 400px;
+    */
+    
+  background-color: #9d9d9d;
+  /*border: thin solid red;*/
+  display: flex; /*flex|inline-flex*/
+
+  /*Definie la alineacion de los hijos en base al eje principal ( main-axis), definido por flex-direction*/
+  justify-content: flex-start; /*flex-start|flex-end|center|space-between|space-around|space-evenly*/
+
+  /*Definie la alineacion de los hijos en base al eje transversal (cross-axis), definido por flex-direction
+   hay dos propiedades: align-items y align-content
+  */
+  /*align-items: funciona por cada linea */
+  align-items: stretch; /*stretch|flex-start|flex-end|center|base-line*/
+
+  /*
+  align-content: agrupa a todos los items como si fueran un grupo
+  NO FUNCIONA cuando los hijos estan en una sola linea*/
+  align-content: flex-start; /*flex-start|flex-end|center|space-between|space-around|space-evenly*/
+}
+
+.container-inline {
+    width: auto;
+  display: inline-flex; /*flex|inline-flex*/
+  flex-wrap: wrap;
+}
+
+.container-flex-section {
+  background-color: white;
+  display: flex;
+}
+
+.container-flex-section-inline {
+  background-color: white;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-evenly;
+}
+.container-flex-section-inline > div {
+  border: medium white solid;
+  width: 50%;
+}
+
+.container-flex-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-flex-row-reverse {
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.container-flex-column {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container-flex-column-reverse {
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+}
+
+.container-flex-wrap-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-flex-wrap-column {
+  height: 15vh;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  flex-flow: column wrap; /*short hand for flew-direction and flex-wrap*/
+}
+
+.item {
+  background-color: #6f9cc9;
+  border: medium solid #0b5bad;
+
+  width: 25%;
+  height: auto;
+  
+  /*
+  Es la habilidad de crecimiento para aprovechar el valor sobrante
+  NO SE ACEPTAN NEGATIVOS
+  */
+  flex-grow: 0;
+
+  /*
+  Es la habilidad de reducir para acoplarse al  valor que no tiene
+  NO SE ACEPTAN NEGATIVOS
+  */
+  flex-shrink: 1;
+
+  /**/
+  flex-basis: auto;
+}
+
+.item:nth-child(2),
+.item:nth-child(17) {
+  /*font-size: 200%;*/
+}
+
+
+
+
+.item2 {
+  background-color: #6184a7;
+  border: medium solid #558fe5;
+/*
+  width: 25%;
+
+  height: 15%;
+*/
+  /*
+  Es la habilidad de crecimiento para aprovechar el valor sobrante
+  NO SE ACEPTAN NEGATIVOS
+  */
+  flex-grow: 1;
+
+  /*
+  Es la habilidad de reducir para acoplarse al  valor que no tiene
+  NO SE ACEPTAN NEGATIVOS
+  */
+  flex-shrink: 1; /*1 encoge 0 se apaga*/
+
+  /*
+  Es el tama;o del elemento hijo dentro de la caja de la linea de la caja flexbox
+  Si la caja flexblox tiene direccion row, entonces flex-basis representa el width
+  Si la caja flexblox tiene direccion column, entonces flex-basis representa el height
+  */
+  flex-basis: auto; /*auto*/
+  /*
+  Es un shorthand para flex-grow, flex-shrink y flex-basic
+  flex: 0 1 auto
+  */
+  flex: 0 1 150px;
+}
+
+.item2:nth-child(2),
+.item2:nth-child(17) {
+  flex-grow: 2;
+  flex-shrink: 3;
+}
+
+
+.item2:nth-child(3) {
+  /*flex-grow: 3;*/
+}
