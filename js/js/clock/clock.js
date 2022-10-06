@@ -1,33 +1,34 @@
-
 const d = document;
 let clockInterval = undefined;
 export function digitalClock(elementClock, btnPlay, btnStop) {
+  let $elementClock = d.querySelector(elementClock),
+    $btnPlay = d.querySelector(btnPlay),
+    $btnStop = d.querySelector(btnStop);
+
   d.addEventListener("click", (e) => {
     if (e.target) {
       if (e.target.matches(btnPlay)) {
-        playClock(elementClock, btnPlay, btnStop);
+        playClock($elementClock, $btnPlay, $btnStop);
       } else if (e.target.matches(btnStop)) {
-        stopClock(elementClock, btnPlay, btnStop);
+        stopClock($elementClock, $btnPlay, $btnStop);
       }
     }
   });
 }
 
-
 const playClock = (elementClock, btnPlay, btnStop) => {
-  d.querySelector(btnPlay).setAttribute("disabled", "true");
-  d.querySelector(btnStop).removeAttribute("disabled");
+  btnPlay.setAttribute("disabled", "true");
+  btnStop.removeAttribute("disabled");
 
   clockInterval = setInterval(() => {
     let time = new Date().toLocaleTimeString();
-    d.querySelector(elementClock).innerHTML = time;
+    elementClock.innerHTML = time;
   }, 1000);
 };
 
 const stopClock = (elementClock, btnPlay, btnStop) => {
-  d.querySelector(btnStop).setAttribute("disabled", "true");
-  d.querySelector(btnPlay).removeAttribute("disabled");
-  d.querySelector(elementClock).innerHTML = "00:00:00";
+  btnStop.setAttribute("disabled", "true");
+  btnPlay.removeAttribute("disabled");
+  elementClock.innerHTML = "00:00:00";
   clearInterval(clockInterval);
 };
-
