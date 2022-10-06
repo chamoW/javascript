@@ -8,7 +8,7 @@
   --main-modal-color: rgba(247, 222, 30, 0.85);
   --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
-  --header-height:85px;
+  --header-height: 85px;
 }
 
 html {
@@ -74,7 +74,8 @@ main {
   gap: 10px;
 }
 
-section {
+/*********************  SECTION **********************************/
+.sections {
   padding: 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -84,16 +85,27 @@ section {
   text-align: justify;
   padding-top: calc(var(--header-height) + 10px);
   background-color: #eee;
-  
-}
-section:nth-child(1){
-  padding-top: 0;
 }
 
-section > h4 {
+/*
+section:nth-child(1) {
+  padding-top: 0;
+}
+*/
+
+
+.sections > h4 {
   text-align: center;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px dashed #000;
+}
+
+.sections > div {
+  display: flex;
+  text-align: justify !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 footer {
@@ -114,7 +126,7 @@ footer {
   right: 0;
   left: 0;
   width: 100%;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   /**De arriba*/
   transform: translate(0, -100%);
   /**De abajo*/
@@ -126,7 +138,7 @@ footer {
 }
 
 .aside-panel.is-active {
-  transform: translate(0,0);
+  transform: translate(0, 0);
 }
 
 .menu-nav {

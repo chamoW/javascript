@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dinamyc Flex Example</title>
     <link type="text/css" rel="stylesheet" href="./css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="./css/clock.css" />
     <link
       type="text/css"
       rel="stylesheet"
       href="./css/vendors/hamburgers.css"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
   </head>
   <body>
@@ -31,117 +46,135 @@
 
     <aside id="aside" class="aside-panel">
       <nav class="menu-nav">
-        <a href="#section1" id="seccion1">Section 1</a>
+        <a href="#section1" id="seccion1">Reloj Digital</a>
         <a href="#section2" id="seccion2">Section 2</a>
         <a href="#section3" id="seccion3">Section 3</a>
         <a href="#section4" id="seccion4">Section 4</a>
         <a href="#section5" id="seccion5">Section 5</a>
-        <a href="#section6" id="seccion6">Section 6</a>
-        <a href="#section7" id="seccion7">Section 7</a>
-        <a href="#section8" id="seccion8">Section 8</a>
-        <a href="#section9" id="seccion9">Section 9</a>
+        <a href="#section6" id="seccion6 ">Section 6</a>
+        <a href="#section7" id="seccion7 ">Section 7</a>
+        <a href="#section8" id="seccion8 ">Section 8</a>
+        <a href="#section9" id="seccion9 ">Section 9</a>
         <a href="#section10" id="seccion10">Section 10</a>
       </nav>
     </aside>
 
     <main>
-      <section>
-        <h4>SECTION</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          molestias placeat laudantium laboriosam dignissimos magnam eius est
-          cumque voluptatum cupiditate ea dolor, sint illum quidem rerum nemo
-          ipsam! Veniam, blanditiis?
-        </p>
-      </section>
+      <section class="sections" id="section1">
+        <h4>Reloj Digital</h4>
+        <div class="clock-panel">
+          <div id="clock" class="clock-panel-content">00:00:00</div>
 
-      <section id="section1">
-        <h4>SECTION 1</h4>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, ipsum
-          odit quod dolore perferendis sed saepe facilis pariatur velit id
-          natus, perspiciatis repudiandae? Dolor ea error, rerum consequuntur
-          tenetur quam?
-        </p>
+          <audio id="beep" src="assets/sounds/beep2.mp3">
+            <p>
+              Your browser doesn't support HTML5 audio. Here is a
+              <a href="assets/sounds/beep2.mp3">link to the audio</a> instead.
+            </p>
+          </audio>
+
+          <div class="clock-panel-buttons">
+            <button id="btn-play" type="button" class="btn btn-primary">
+              <i class="bi bi-play-fill"></i> Play Clock
+            </button>
+            <button id="btn-stop" type="button" class="btn btn-danger" disabled>
+              <i class="bi bi-stop-fill"></i> Stop CLock
+            </button>
+            <button
+              id="btn-alarm-start"
+              type="button"
+              class="btn btn-outline-success"
+            >
+              <i class="bi bi-alarm"></i>Star Alarm
+            </button>
+            <button
+              id="btn-alarm-stop"
+              type="button"
+              class="btn btn-outline-danger"
+              disabled
+            >
+              <i class="bi bi-alarm-fill"></i>Top Alarm
+            </button>
+          </div>
+        </div>
       </section>
-      <section id="section2">
+      <section class="sections" id="section2">
         <h4>SECTION 2</h4>
-        <p>
+        <div>
           Iste maxime reprehenderit maiores adipisci pariatur? Nisi quidem
           provident voluptatum labore amet inventore ex velit consequatur eum
           error, vel facilis, quibusdam voluptatem delectus, harum nostrum
           temporibus maiores placeat magnam dolorum?
-        </p>
+        </div>
       </section>
-      <section id="section3">
+      <section class="sections" id="section3">
         <h4>SECTION 3</h4>
-        <p>
+        <div>
           Perspiciatis, eligendi aspernatur voluptatibus atque assumenda ratione
           rerum nisi eaque quod mollitia nesciunt harum exercitationem deserunt
           temporibus placeat velit culpa minus vel omnis est. Distinctio eum
           sequi sed quo. Ab.
-        </p>
+        </div>
       </section>
-      <section id="section4">
+      <section class="sections" id="section4">
         <h4>SECTION 4</h4>
-        <p>
+        <div>
           Qui distinctio excepturi corrupti itaque. Vitae ipsum, vel cum commodi
           magnam placeat laborum unde dolor ex autem recusandae quod tempore
           modi repellat fugit sequi voluptates quam itaque quia quis laudantium!
-        </p>
+        </div>
       </section>
-      <section id="section5">
+      <section class="sections" id="section5">
         <h4>SECTION 5</h4>
-        <p>
+        <div>
           Accusantium, eius alias doloremque eaque neque maxime odio maiores
           nesciunt earum consectetur ut corrupti sunt aliquid molestiae id
           quaerat provident consequatur laboriosam? Quo maiores error iure sint
           odio magnam pariatur!
-        </p>
+        </div>
       </section>
-      <section id="section6">
+      <section class="sections" id="section6">
         <h4>SECTION 6</h4>
-        <p>
+        <div>
           Unde ea tempore facere fugiat tenetur impedit consequatur repellendus
           rerum asperiores, hic fugit harum porro ratione quis id ipsa placeat
           velit ut accusamus illo sequi quibusdam explicabo quia eum. Quae?
-        </p>
+        </div>
       </section>
-      <section id="section7">
+      <section class="sections" id="section7">
         <h4>SECTION 7</h4>
-        <p>
+        <div>
           Ut doloremque placeat possimus aperiam laborum, quis voluptatem, fuga
           a cumque excepturi natus reiciendis tempora quas expedita. Fuga
           suscipit dicta accusamus qui nesciunt quis, nisi et officiis possimus
           sit quod?
-        </p>
+        </div>
       </section>
-      <section id="section8">
+      <section class="sections" id="section8">
         <h4>SECTION 8</h4>
-        <p>
+        <div>
           Vitae autem quae obcaecati minima odio voluptates? Nobis asperiores,
           labore cumque sint obcaecati, magni rerum explicabo nulla animi porro
           ratione, accusamus dolor eaque dolorum voluptates. Consequatur animi
           quod nulla magni!
-        </p>
+        </div>
       </section>
-      <section id="section9">
+      <section class="sections" id="section9">
         <h4>SECTION 9</h4>
-        <p>
+        <div>
           Expedita alias similique voluptatum numquam ipsam corrupti rerum.
           Aspernatur facilis, reiciendis, aliquam dolore consectetur ab
           recusandae, adipisci explicabo quis ipsum nisi pariatur praesentium
           accusantium illo totam fugiat quod voluptatem odio.
-        </p>
+        </div>
       </section>
-      <section id="section10">
+      <section class="sections" id="section10">
         <h4>SECTION 10</h4>
-        <p>
+        <div>
           Debitis vitae molestiae maiores et cupiditate in veniam, voluptas
           tempore reprehenderit dignissimos excepturi officia quam pariatur?
           Totam facere laboriosam amet cum est, voluptates dolor magni adipisci!
           Asperiores ratione provident esse?
-        </p>
+        </div>
       </section>
     </main>
 
@@ -150,5 +183,13 @@
     </footer>
 
     <script src="./js/menuHamburger/hamburger_button.js" type="module"></script>
+    <script src="./js/domExcersices.js" type="module"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
