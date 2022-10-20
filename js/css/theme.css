@@ -1,0 +1,27 @@
+/*********************  BTN THEME **********************************/
+.btn-theme {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  left: 1vh;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid #000 !important;
+  background-color: var(--main-color) !important;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--second-color) !important;
+  transition: all 0.3s ease-out;
+}
+
+.btn-theme:hover {
+  background-color: var(--second-color) !important;
+  color: var(--main-color) !important;
+}
+
+.dark-mode {
+  background-color: var(--second-color);
+  color: var(--main-color);
+
+}

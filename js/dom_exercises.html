@@ -7,6 +7,8 @@
     <title>Dinamyc Flex Example</title>
     <link type="text/css" rel="stylesheet" href="./css/layout.css" />
     <link type="text/css" rel="stylesheet" href="./css/clock.css" />
+    <link type="text/css" rel="stylesheet" href="./css/theme.css">
+    <link type="text/css" rel="stylesheet" href="./css/go-up-button.css">
     <link
       type="text/css"
       rel="stylesheet"
@@ -28,7 +30,7 @@
     />
   </head>
   <body>
-    <header>
+    <header data-theme>
       <div class="header-logo">
         <img src="https://robohash.org/chamow19?size=50x50" alt="logo image" />
       </div>
@@ -42,6 +44,10 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
+
+    <button class="btn-theme">🌙</button>
+
+    <button class="btn-go-up hidden">&#8593;</button>
 
     <aside id="aside" class="aside-panel">
       <nav class="menu-nav">
@@ -58,7 +64,7 @@
       </nav>
     </aside>
 
-    <main>
+    <main data-theme>
       <section class="sections" id="section1">
         <h4>Reloj Digital</h4>
         <div class="clock-panel">
