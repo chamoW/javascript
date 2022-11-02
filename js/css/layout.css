@@ -93,7 +93,6 @@ section:nth-child(1) {
 }
 */
 
-
 .sections > h4 {
   text-align: center;
   padding-top: 0.5rem;
@@ -118,7 +117,7 @@ footer {
 /*********************  ASIDE **********************************/
 .aside-panel {
   display: flex;
-  background-color: var(--second-modal-color);
+
   position: fixed;
   z-index: 998;
   top: 0;
@@ -126,6 +125,10 @@ footer {
   right: 0;
   left: 0;
   width: 100%;
+  overflow-y: auto;
+  background-color: var(--second-modal-color);
+  opacity: 0;
+  visibility: hidden;
   transition: transform 0.3s ease;
   /**De arriba*/
   transform: translate(0, -100%);
@@ -135,11 +138,12 @@ footer {
   transform: translate(-100%, 0);
   /**De derecha*/
   transform: translate(+100%, 0);
-  overflow-y: auto;
 }
 
 .aside-panel.is-active {
   transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu-nav {
@@ -182,4 +186,63 @@ footer {
   display: flex !important;
   justify-content: center;
   align-items: center;
+}
+
+/*********************  SCROLL SPY **********************************/
+@media screen and (min-width: 800px) {
+  body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 4rem auto auto;
+    grid-template-areas:
+      "header header"
+      "main   panel"
+      "footer   footer";
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  header {
+    grid-area: header;
+    height: 4rem;
+  }
+
+  .aside-panel {
+    grid-area: panel;
+    position: sticky;
+    top: 4rem;
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+    background-color: var(--second-color);
+    justify-content: flex-start;
+    align-self: start;
+  }
+
+  .menu-nav {
+    justify-content: start;
+    text-align: right;
+  }
+
+  .menu-nav a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .menu-nav a:hover,
+  .menu-nav a.active {
+    color: var(--second-color);
+    background-color: var(--main-modal-color);
+  }
+
+
+  footer {
+    grid-area: footer;
+  }
+
+  .btn-hamburger {
+    display: none !important;
+  }
 }

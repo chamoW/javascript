@@ -1,31 +1,36 @@
 /*********************  BTN UP **********************************/
-.btn-go-up{
-    position: fixed;
-    z-index: 999;
-    bottom: 1vh;
-    right:calc( 4.5rem + 1vh) ;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    border: 1px solid #000 !important;
-    background-color: var(--main-color) !important;
-    font-size: 4rem;
-    font-weight: bold;
-    color: var(--second-color) !important;
-    transition: all 0.3s ease-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .btn-go-up:hover {
-    background-color: var(--second-color) !important;
-    color: var(--main-color) !important;
-  }
-  
+.btn-go-up {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: calc(4.5rem + 1vh);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid #000 !important;
+  background-color: var(--main-color) !important;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--second-color) !important;
+  transition: all 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .hidden {
-    visibility: hidden;
-    opacity: 0;
+.btn-go-up:hover {
+  background-color: var(--second-color) !important;
+  color: var(--main-color) !important;
+}
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .btn-go-up {
+    right: initial;
+    left: calc(4.5rem + 1vh);
   }
+}

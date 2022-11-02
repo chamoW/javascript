@@ -1,10 +1,11 @@
 import { clockAlarm } from "./clock/alarm.js";
 import { digitalClock } from "./clock/clock.js";
 import { menuHamburger } from "./menuHamburger/hamburger_buttonv2.js";
-import { scrollGoUp } from "./scroll-go-up.js";
+import { scrollGoUp } from "./scroll/scroll-go-up.js";
 import { changeTheme } from "./theme/theme.js";
 import validateNetworkStatus from "./network/network-status.js";
-import getGeolocation from "./geolocalozation.js";
+import getGeolocation from "./geolocation/geolocalozation.js";
+import scrollSpy from "./scroll/scroll_spy.js";
 
 const d = document;
 
@@ -16,6 +17,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
   scrollGoUp(".btn-go-up");
   getGeolocation("geolocation");
+  scrollSpy("data-scroll")
 });
 
 validateNetworkStatus("netstate");
