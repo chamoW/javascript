@@ -9,11 +9,15 @@
     <link type="text/css" rel="stylesheet" href="./css/clock.css" />
     <link type="text/css" rel="stylesheet" href="./css/theme.css">
     <link type="text/css" rel="stylesheet" href="./css/go-up-button.css">
+    
     <link
       type="text/css"
       rel="stylesheet"
       href="./css/vendors/hamburgers.css"
     />
+
+    <link rel="stylesheet" href="./css/network-status.css">
+    <link rel="stylesheet" href="./css/geolocation.css">
 
     <!-- Bootstrap 5 -->
     <link
@@ -49,6 +53,8 @@
 
     <button class="btn-go-up hidden">&#8593;</button>
 
+    <div id="netstate"></div>
+
     <aside id="aside" class="aside-panel">
       <nav class="menu-nav">
         <a href="#section1" id="seccion1">Reloj Digital</a>
@@ -59,8 +65,10 @@
         <a href="#section6" id="seccion6 ">Section 6</a>
         <a href="#section7" id="seccion7 ">Section 7</a>
         <a href="#section8" id="seccion8 ">Section 8</a>
-        <a href="#section9" id="seccion9 ">Section 9</a>
+        <a href="#section9" id="seccion9 ">Geolocalización</a>
         <a href="#section10" id="seccion10">Section 10</a>
+        <a href="#section11" id="seccion11">Section 11</a>
+        <a href="#section12" id="seccion12">Section 12</a>
       </nav>
     </aside>
 
@@ -164,13 +172,11 @@
         </div>
       </section>
       <section class="sections" id="section9">
-        <h4>SECTION 9</h4>
+        <h4>GEOLOCALIZACION</h4>
         <div>
-          Expedita alias similique voluptatum numquam ipsam corrupti rerum.
-          Aspernatur facilis, reiciendis, aliquam dolore consectetur ab
-          recusandae, adipisci explicabo quis ipsum nisi pariatur praesentium
-          accusantium illo totam fugiat quod voluptatem odio.
+          Ejemplo de geolocalización usando Javascript
         </div>
+        <div id="geolocation" class="geolocation"></div>
       </section>
       <section class="sections" id="section10">
         <h4>SECTION 10</h4>

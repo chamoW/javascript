@@ -135,6 +135,7 @@ footer {
   transform: translate(-100%, 0);
   /**De derecha*/
   transform: translate(+100%, 0);
+  overflow-y: auto;
 }
 
 .aside-panel.is-active {
