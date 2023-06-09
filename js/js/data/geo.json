@@ -1,0 +1,73 @@
+{
+  "plus_code": {
+    "compound_code": "QF5H+263 Quito, Ecuador",
+    "global_code": "67F3QF5H+263"
+  },
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "825",
+          "short_name": "825",
+          "types": ["street_number"]
+        },
+        {
+          "long_name": "Pedro de Alfaro",
+          "short_name": "Pedro de Alfaro",
+          "types": ["route"]
+        },
+        {
+          "long_name": "Villa Flora",
+          "short_name": "Villa Flora",
+          "types": ["political", "sublocality", "sublocality_level_1"]
+        },
+        {
+          "long_name": "Quito",
+          "short_name": "Quito",
+          "types": ["locality", "political"]
+        },
+        {
+          "long_name": "Distrito Metropolitano de Quito",
+          "short_name": "Distrito Metropolitano de Quito",
+          "types": ["administrative_area_level_2", "political"]
+        },
+        {
+          "long_name": "Pichincha",
+          "short_name": "Pichincha",
+          "types": ["administrative_area_level_1", "political"]
+        },
+        {
+          "long_name": "Ecuador",
+          "short_name": "EC",
+          "types": ["country", "political"]
+        },
+        {
+          "long_name": "170111",
+          "short_name": "170111",
+          "types": ["postal_code"]
+        }
+      ],
+      "formatted_address": "Pedro de Alfaro 825, Quito 170111, Ecuador",
+      "geometry": {
+        "location": {
+          "lat": -0.2428454,
+          "lng": -78.52180249999999
+        },
+        "location_type": "RANGE_INTERPOLATED",
+        "viewport": {
+          "northeast": {
+            "lat": -0.2414964197084979,
+            "lng": -78.52045351970848
+          },
+          "southwest": {
+            "lat": -0.244194380291502,
+            "lng": -78.5231514802915
+          }
+        }
+      },
+      "place_id": "EipQZWRybyBkZSBBbGZhcm8gODI1LCBRdWl0byAxNzAxMTEsIEVjdWFkb3IiGxIZChQKEglrvJ31CZnVkRFk1JMsGjThzRC5Bg",
+      "types": ["street_address"]
+    }
+  ],
+  "status": "OK"
+}

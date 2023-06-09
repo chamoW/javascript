@@ -1,3 +1,5 @@
+import filtersJson from "../data/filters.json" assert { type: "json" };
+
 import { validateArray, validateNumericArray } from "./utils.js";
 /*
 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
@@ -119,4 +121,23 @@ export const obtenerPromedio = (data = undefined) => {
 
     return console.info(`El promedio de ${data.join("+ ")} es ${promedio}`);
   }
+};
+
+export const filtrarData = () => {
+  const { uiPermissions } = filtersJson;
+
+  const data = [];
+
+  uiPermissions.forEach((item) => {
+    if (item.childrenList.length) {
+      item.childrenList.forEach((item2) => {
+        data.push({
+          id: item2.idItem,
+          label: item.label + " - " + item2.label,
+        });
+      });
+    }
+  });
+
+  console.log("data ", data);
 };

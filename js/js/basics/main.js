@@ -9,7 +9,7 @@ import {
 import { countRepeteadWord, deletePattern, invertString, validatePalindrom } from "./exercises2.js";
 import { getAleatorio, getFactorial } from "./exercises3.js";
 import { getYears } from "./exercises4.js";
-import {  deleteDuplicated, getMaxAndMin, getParImpar, getSquares, obtenerPromedio, orderData } from "./exercises5.js";
+import {  deleteDuplicated, filtrarData, getMaxAndMin, getParImpar, getSquares, obtenerPromedio, orderData } from "./exercises5.js";
 
 console.group("OPERACTIONS");
 welcome();
@@ -212,3 +212,7 @@ obtenerPromedio([2,3,"s", 2, 2])
 obtenerPromedio([2,3, 54, 90, 0, 3, 0])
 obtenerPromedio([20,18,17, 20, 19])
 console.groupEnd("OBTENER PROMEDIO");
+
+console.group("FILTRAR DATA")
+filtrarData()
+console.groupEnd("FILTRAR DATA")

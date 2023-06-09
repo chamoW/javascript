@@ -7,7 +7,8 @@ import validateNetworkStatus from "./network/network-status.js";
 import getGeolocation from "./geolocation/geolocalozation.js";
 import scrollSpy from "./scroll/scroll_spy.js";
 
-const d = document;
+const d = document,
+  w = window;
 
 d.addEventListener("DOMContentLoaded", (e) => {
   menuHamburger(".btn-hamburger", ".aside-panel", ".menu-nav a");
@@ -16,8 +17,11 @@ d.addEventListener("DOMContentLoaded", (e) => {
   changeTheme(".btn-theme", "dark-mode", "data-theme");
 
   scrollGoUp(".btn-go-up");
-  getGeolocation("geolocation");
-  scrollSpy("data-scroll")
+  
+  scrollSpy("data-scroll");
 });
 
 validateNetworkStatus("netstate");
+
+getGeolocation("geolocation");
+

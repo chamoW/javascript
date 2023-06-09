@@ -1,0 +1,355 @@
+{
+  "uiPermissions": [
+    {
+      "ordinal": 0,
+      "idItem": "electronicInvoice",
+      "label": "Emisión del CAL (Certificado de Acciones Legales)",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": []
+    },
+    {
+      "ordinal": 0,
+      "idItem": "position",
+      "label": "Posición",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": []
+    },
+    {
+      "ordinal": 0,
+      "idItem": "product.read",
+      "label": "Ver/Consultar",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": []
+    },
+    {
+      "ordinal": 100,
+      "idItem": "transfers",
+      "label": "Transferir",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": [
+        {
+          "ordinal": 0,
+          "idItem": "frequentDestinations",
+          "label": "Agenda de Destinatarios",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 10,
+          "idItem": "transfer.internal",
+          "label": "Entre cuentas propias Banco Mariva",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 10,
+          "idItem": "transfer.local",
+          "label": "Transferencia interbancaria",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 10,
+          "idItem": "transfer.thirdParties",
+          "label": "A otras cuentas Banco Mariva",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        }
+      ]
+    },
+    {
+      "ordinal": 300,
+      "idItem": "checkbooks",
+      "label": "Operar con cheques",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": [
+        {
+          "ordinal": 10,
+          "idItem": "accounts.requestCheckbook",
+          "label": "Solicitud de Chequera",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        }
+      ]
+    },
+    {
+      "ordinal": 500,
+      "idItem": "investments",
+      "label": "Inversiones",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": [
+        {
+          "ordinal": 0,
+          "idItem": "mutualFunds.read",
+          "label": "Fondo Común de Inversión",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 1,
+          "idItem": "createFixedTermDeposit.send",
+          "label": "Solicitud de Plazo Fijo",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 2,
+          "idItem": "cancelDepositRenewal.send",
+          "label": "Cancelación de renovación automática",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 3,
+          "idItem": "investment.subscription",
+          "label": "Suscripción FCI",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 3,
+          "idItem": "investments.shareholderAccountOpening.send",
+          "label": " Solicitud de Cuenta Cuotapartista",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "investment.rescue",
+          "label": "Rescate FCI",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        }
+      ]
+    },
+    {
+      "ordinal": 700,
+      "idItem": "comex",
+      "label": "ComEx",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": [
+        {
+          "ordinal": 0,
+          "idItem": "receipts.comex",
+          "label": "Ver y consultar comprobantes Comex",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        }
+      ]
+    },
+    {
+      "ordinal": 900,
+      "idItem": "accounts",
+      "label": "Cuentas",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": [
+        {
+          "ordinal": 3,
+          "idItem": "accountOpening.send",
+          "label": "Solicitar apertura de Cuenta",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.140",
+          "label": "ECheq Consultar",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.141",
+          "label": "ECheq Confeccionar",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.142",
+          "label": "ECheq Aceptar",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.143",
+          "label": "ECheq Repudiar Operador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.144",
+          "label": "ECheq Repudiar Autorizador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.145",
+          "label": "ECheq Funciones Firmantes Operador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.146",
+          "label": "ECheq Funciones Firmantes Autorizador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.147",
+          "label": "ECheq Adhesión Cuentas Operador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.148",
+          "label": "ECheq Adhesión Cuentas Autorizador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.149",
+          "label": "ECheq Cesión de derecho operador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.150",
+          "label": "Echeq Cesión de derecho autorizador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.151",
+          "label": "ECheq Firmar Endosar Operador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.152",
+          "label": "ECheq Firmar Endosar Autorizador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.153",
+          "label": "ECheq Aval Operador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 4,
+          "idItem": "accounts.echeq.154",
+          "label": "ECheq Aval Autorizador",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        }
+      ]
+    },
+    {
+      "ordinal": 1100,
+      "idItem": "loans",
+      "label": "Préstamos",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": [
+        {
+          "ordinal": 1,
+          "idItem": "loans.operations",
+          "label": "Préstamos y otras operaciones",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 2,
+          "idItem": "loans.history",
+          "label": "Ver operaciones históricas",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 3,
+          "idItem": "loans.active",
+          "label": "Ver operaciones vigentes",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        },
+        {
+          "ordinal": 60,
+          "idItem": "requestLoan.send",
+          "label": "Solicitar préstamo",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        }
+      ]
+    },
+    {
+      "ordinal": 1500,
+      "idItem": "payments",
+      "label": "Pagar",
+      "checkedStatus": null,
+      "dependsOn": null,
+      "childrenList": [
+        {
+          "ordinal": 0,
+          "idItem": "payTransfers",
+          "label": "administration.permissions.advanced.itemMenu.payTransfers",
+          "checkedStatus": null,
+          "dependsOn": null,
+          "childrenList": []
+        }
+      ]
+    }
+  ]
+}
